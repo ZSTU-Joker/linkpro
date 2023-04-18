@@ -10,12 +10,21 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>springboot-cv</artifactId>
+    <properties>
+        <!-- javacpp当前版本 -->
+        <javacpp.version>1.4.3</javacpp.version>
+    </properties>
 
-<dependencies>
-    <dependency>
-        <groupId>org.bytedeco</groupId>
-        <artifactId>javacv-platform</artifactId>
-        <version>1.4.4</version>
-    </dependency>
-</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>javacv-platform</artifactId>
+            <version>${javacpp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.16</version>
+        </dependency>
+    </dependencies>
 </project>
