@@ -34,12 +34,12 @@ public class TakePhotos {
             opencv_core.Mat mat = converter.convertToMat(grabber.grabFrame());
             canvas.showImage(converter.convert(mat));
             //保存第一帧到本地
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
             Date d = new Date();
             String date = sdf.format(d);
             String substring = date.substring(date.length() - 2);
-            if (Integer.valueOf(substring) % 10 == 0) {
-                opencv_imgcodecs.imwrite("E:\\picture-save\\" + date + ".jpg", mat);
+            if (Integer.valueOf(substring) % 2 == 0) {
+                opencv_imgcodecs.imwrite("E:\\pic_save_all\\" + date + ".jpg", mat);
             }
         }
         grabber.close();//停止抓取
