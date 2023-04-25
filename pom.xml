@@ -48,6 +48,8 @@
     <module>springboot-netty</module>
     <module>springboot-jna</module>
     <module>springboot-cv</module>
+    <module>springboot-file</module>
+    <module>springboot-file-transfer</module>
 </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
