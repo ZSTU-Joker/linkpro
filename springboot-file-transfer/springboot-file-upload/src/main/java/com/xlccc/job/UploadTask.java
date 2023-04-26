@@ -28,11 +28,10 @@ public class UploadTask {
      * @Scheduled(fixedRate = 1000)
      * @Scheduled(fixedRate = 500)
      */
-
     @Scheduled(cron = "* 0/1 * * * ? ")
     private void UploadTask() {
         try {
-            String folder = "E:\\pic_save_all";
+            String folder = "D:\\joker\\pic-upload";
             List<String> filePaths = fileService.getJpgFilePaths(folder);
             for (String f : filePaths) {
                 File tempFile = new File(f);
@@ -44,11 +43,4 @@ public class UploadTask {
             throw new RuntimeException(e);
         }
     }
-
-    @Async
-    @Scheduled(fixedRate = 2000)
-    public void AsyncTask() {
-        log.info("AsyncTask -- Hello ");
-    }
-
 }

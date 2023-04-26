@@ -17,7 +17,7 @@ public class ReceiveService {
     /**
      * Example: fileSavePath = "E:\\file_save_path\\";
      */
-    public static String fileSavePath = "E:\\file_save_path\\";
+    public static String fileSavePath = "D:\\joker\\pic-download\\";
 
     public void saveToLocal(MultipartFile file){//上传到本地
         log.info(file.getOriginalFilename());
